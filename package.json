@@ -4,15 +4,18 @@
   "description": "AI prompt matcher for testing with Vitest and Jest",
   "packageManager": "pnpm@9.0.0",
   "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "files": ["dist"],
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "prepublishOnly": "pnpm build && pnpm typecheck",
