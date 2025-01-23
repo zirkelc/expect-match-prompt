@@ -1,6 +1,10 @@
 import { describe, expect, test } from 'vitest';
 import { toMatchPrompt } from '../src/matcher.js';
 
+if (!process.env.OPENAI_API_KEY) {
+  throw new Error('OPENAI_API_KEY is not set');
+}
+
 expect.extend({
   toMatchPrompt,
 });
