@@ -9,6 +9,15 @@ import { format, plugins } from '@vitest/pretty-format';
 import { type LanguageModelV1, Output, generateObject } from 'ai';
 import { z } from 'zod';
 
+interface CustomMatchers<R = unknown> {
+  toMatchPrompt: (expected: string) => Promise<R>;
+}
+
+declare module 'vitest' {
+  interface Assertion<T = any> extends CustomMatchers<T> {}
+  interface AsymmetricMatchersContaining extends CustomMatchers {}
+}
+
 const formatOptions = {
   plugins: Object.values(plugins),
 };

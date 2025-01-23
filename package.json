@@ -19,7 +19,7 @@
   },
   "scripts": {
     "prepublishOnly": "pnpm build && pnpm typecheck",
-    "build": "tsup && cp types/vitest.d.ts dist/vitest.d.ts",
+    "build": "tsup",
     "test": "vitest",
     "lint": "biome check . --write",
     "prepare": "husky",
