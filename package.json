@@ -1,6 +1,6 @@
 {
   "name": "expect-match-prompt",
-  "version": "0.0.1-0",
+  "version": "0.0.1-1",
   "description": "AI prompt matcher for testing with Vitest and Jest",
   "packageManager": "pnpm@9.0.0",
   "main": "dist/index.cjs",
