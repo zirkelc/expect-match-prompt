@@ -14,6 +14,9 @@ npm add -D expect-match-prompt
 
 Import `toMatchPrompt` and use [`expect.extend`](https://vitest.dev/api/expect.html#expect-extend) to extend default matchers.
 
+> [!IMPORTANT]  
+> The `toMatchPrompt` matcher is an asynchronous operation, so it's important to `await` expectation.
+
 ```ts
 import { describe, expect, test } from 'vitest';
 import { toMatchPrompt } from 'expect-match-prompt';

@@ -8,6 +8,7 @@ import type { RawMatcherFn, SyncExpectationResult } from '@vitest/expect';
 import { format, plugins } from '@vitest/pretty-format';
 import { type LanguageModelV1, Output, generateObject } from 'ai';
 import { z } from 'zod';
+import 'vitest';
 
 interface CustomMatchers<R = unknown> {
   toMatchPrompt: (expected: string) => Promise<R>;

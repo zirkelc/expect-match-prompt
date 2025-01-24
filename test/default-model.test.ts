@@ -18,6 +18,8 @@ describe('toMatchPrompt', () => {
     await expect('Bonjour, comment ça va?').toMatchPrompt(
       'it should be French',
     );
+
+    await expect('Hi, how are you?').not.toMatchPrompt('it should be German');
   }, 10_000);
 
   test('should match sentiment', async () => {
